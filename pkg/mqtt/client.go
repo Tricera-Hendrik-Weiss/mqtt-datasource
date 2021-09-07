@@ -125,7 +125,7 @@ func (c *Client) Subscribe(t string) {
 		path: t,
 	}
 	c.topics.Store(&topic)
-	c.client.Subscribe(t, 0, c.HandleMessage)
+	c.client.Subscribe(t, 1, c.HandleMessage)
 }
 
 func (c *Client) Unsubscribe(t string) {
