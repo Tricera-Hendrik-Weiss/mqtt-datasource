@@ -42,6 +42,7 @@ func NewClient(o Options) (*Client, error) {
 	}
 
 	opts.SetCleanSession(false)
+	opts.SetConnectRetry(true)
 	opts.SetPingTimeout(60 * time.Second)
 	opts.SetKeepAlive(60 * time.Second)
 	opts.SetAutoReconnect(true)
